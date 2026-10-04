@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="contact-section">
+  <div class="container">
+    <div class="section-title text-center">
+      <span class="badge-custom">CONTACT</span>
+      <h2>Hubungi Saya</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mb-4">
+        <div class="contact-card">
+          <h3>Form Pesan</h3>
+          <form method="post" action="/kontak">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama</label>
+              <input type="text" class="form-control custom-input" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control custom-input" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Pesan</label>
+              <textarea class="form-control custom-input" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-custom">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-4">
+        <div class="contact-info-card">
+          <h3>Informasi Kontak</h3>
+          <p>Jika Anda punya pertanyaan, saran, atau ingin berkolaborasi, saya siap membantu.</p>
+
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:yasaahmadaflahsyabil@gmail.com">yasaahmadaflahsyabil@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Lokasi</strong>
+            <span>Karanggede, Indonesia</span>
+          </div>
+
+          <div class="contact-item">
+            <strong>Status</strong>
+            <span>Mahasiswa / Pelajar Web</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

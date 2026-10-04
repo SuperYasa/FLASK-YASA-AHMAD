@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <span class="badge-custom">WELCOME TO FLASK</span>
+        <h1 class="hero-title">SELAMAT DATANG DI FLASK</h1>
+        <p class="hero-text">
+          Saya membuat aplikasi web sederhana dengan Flask dan menampilkan profil dengan
+          tampilan yang lebih modern, bersih, dan menarik untuk dilihat.
+        </p>
+        <div class="hero-actions">
+          <a href="#profile" class="btn btn-primary btn-custom">Lihat Profil</a>
+          <a href="{{ url_for('kontak') }}" class="btn btn-outline-light btn-custom">Hubungi Saya</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="{{ url_for('static', filename='image/yasaimage.jpeg') }}" alt="Yasa Ahmad" class="hero-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="profile" class="profile-section">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Profil Saya</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      {% for save in Datas %}
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="profile-card h-100">
+          <img src="{{ url_for('static', filename=save.gambar) }}" alt="{{ save.Nama }}" class="card-img-top profile-img">
+          <div class="card-body">
+            <h4 class="profile-name">{{ save.Nama }}</h4>
+            <p class="profile-detail"><strong>Umur:</strong> {{ save.Umur }}</p>
+            <p class="profile-detail"><strong>Asal:</strong> {{ save.Asal }}</p>
+            <p class="profile-detail"><strong>Pekerjaan:</strong> {{ save.Pekerjaan }}</p>
+            <p class="profile-detail"><strong>Data:</strong> {{ save.dataa }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

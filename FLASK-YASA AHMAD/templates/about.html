@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5 mb-4">
+        <div class="about-image-wrap">
+          <img src="{{ url_for('static', filename='image/yasaimage.jpeg') }}" alt="Yasa Ahmad" class="about-image">
+        </div>
+      </div>
+
+      <div class="col-lg-7 mb-4">
+        <span class="badge-custom badge-about">ABOUT ME</span>
+        <h1 class="section-main-title">Tentang Saya</h1>
+        <p class="about-text">
+          Halo, nama saya <strong>Yasa Ahmad Aflah Syabil</strong>. Saya adalah seorang mahasiswa yang sedang
+          belajar dan berkembang dalam bidang pengembangan web, khususnya menggunakan Flask.
+        </p>
+        <p class="about-text">
+          Saat ini, saya fokus mempelajari cara membuat aplikasi web yang sederhana namun fungsional,
+          mulai dari desain interface, struktur data, hingga integrasi antar halaman.
+        </p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4">
+        <div class="info-card">
+          <h4>Belajar</h4>
+          <p>Mengembangkan kemampuan dalam pembuatan website dan logika pemrograman.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="info-card">
+          <h4>Berinovasi</h4>
+          <p>Mencoba hal baru, mulai dari desain hingga project kecil berbasis web.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="info-card">
+          <h4>Bergerak</h4>
+          <p>Terus belajar dan membangun solusi yang bermanfaat untuk pengguna.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
